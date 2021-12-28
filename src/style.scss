@@ -1,0 +1,112 @@
+@import "./normalize.scss";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  background-color: rgb(223, 223, 223);
+}
+
+.modal {
+  position: relative;
+  width: 500px;
+  padding: 30px 30px 40px;
+  background-color: #fff;
+  border-radius: 20px;
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+
+  &__button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    height: 35px;
+    width: 130px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(221, 23, 116);
+    cursor: pointer;
+
+    font-size: 20px;
+    color: #fff;
+
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgb(160, 16, 83);
+    }
+  }
+
+  &__amount {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(15, 126, 57);
+  }
+
+  &__tokens {
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 10px;
+    background-color: rgb(245, 245, 245);
+  }
+
+  &__token-wrapper {
+    padding: 7px 14px;
+
+    &:first-child {
+      padding-top: 14px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    &:last-child {
+      padding-bottom: 14px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    &:hover {
+      background-color: rgb(212, 212, 212);
+    }
+  }
+
+  &__token {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &__token-image {
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+  }
+
+  &__token-name,
+  &__token-sum {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(110, 110, 110);
+  }
+
+  &__token-info {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .modal {
+    &__button {
+      position: static;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+}
